@@ -1,5 +1,11 @@
+ul, li, h1, h2, h3, h4, h5 {
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
-  background-color: #4B7399;
+/*  background: url(../images/bg_brwn.png) repeat-x top left #5b470b;*/
+  background: #ddd;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
 }
@@ -10,6 +16,7 @@ a img {
 
 a {
   color: #0000FF;
+  text-decoration: none;
 }
 
 .clear {
@@ -19,12 +26,35 @@ a {
 }
 
 #container {
-  width: 75%;
+  background: #fff;
+  width: 980px;
   margin: 0 auto;
-  background-color: #FFF;
-  padding: 20px 40px;
-  border: solid 1px black;
+  padding: 20px;
   margin-top: 20px;
+}
+
+#header {
+  margin-bottom: 20px;
+}
+
+#header h1 a {
+  display: block;
+  width: 189px;
+  height: 67px;
+  text-indent: -10000px;
+  background: url(../images/logo.png) no-repeat top left;
+}
+
+#header ul {
+  float: right;
+  list-style-type: none;
+  display: inline;
+}
+
+#header li a {
+  padding: 7px;
+  background: #eee;
+  color: #444;
 }
 
 #flash_notice, #flash_error {
