@@ -1,13 +1,15 @@
-ul, li, h1, h2, h3, h4, h5 {
+/*ul, li, h1, h2, h3, h4, h5 {
   margin: 0px;
   padding: 0px;
-}
+}*/
 
 body {
 /*  background: url(../images/bg_brwn.png) repeat-x top left #5b470b;*/
-  background: #ddd;
+  background: #111;
+  color: #333;
   font-family: Verdana, Helvetica, Arial;
-  font-size: 14px;
+  font-size: 100%;
+  line-height: 20px;
 }
 
 a img {
@@ -47,8 +49,13 @@ a {
 
 #header ul {
   float: right;
-  list-style-type: none;
+  list-style: none;
   display: inline;
+}
+
+#header ul li {
+  display: inline;
+/*  list-style: none;*/
 }
 
 #header li a {
