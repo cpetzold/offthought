@@ -2,5 +2,3 @@
 db/schema.rb
 db/schema.sql
 config/database.yml
-config/deploy.rb
-config/environment.rb
