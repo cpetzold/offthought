@@ -1,0 +1,24 @@
+<% title 'Editing your reply' %>
+
+<% form_for(@reply) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :post_id %><br />
+    <%= f.text_field :post_id %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @reply %> |
+<%= link_to 'Back', replies_path %>

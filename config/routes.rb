@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :categories, :has_many => :posts
+
+  map.resources :replies
+
   
   map.resources :user_sessions
   map.resources :users
@@ -10,8 +14,8 @@ ActionController::Routing::Routes.draw do |map|
   map.login 'login', :controller => 'user_sessions', :action => 'new'
   map.logout 'logout', :controller => 'user_sessions', :action => 'destroy'
 
-  map.user ':id', :controller => 'users', :action => 'show'
-  map.user_edit ':id/edit', :controller => 'users', :action => 'edit'
+  map.post ':id', :controller => 'posts', :action => 'show'
+  map.post_edit ':id/edit', :controller => 'posts', :action => 'edit'
   
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

@@ -28,23 +28,36 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @post = Post.new
+    if current_user
+      @categories = Category.all
+      @post = Post.new
+    else
+      flash[:error] = 'You must be logged in to post'
+      redirect_to posts_path
+    end
   end
 
   # GET /posts/post-title/edit
   def edit
     @post = page_post
+    if current_user != @post.user
+      flash[:error] = 'Only ' + @post.user.username + ' can edit this post.'
+      redirect_to posts_path
+    end
+    
   end
 
   # POST /posts
   def create
     @post = Post.new(params[:post])
+    @post.user_id = current_user.id
+    @post.category_id = params[:payment][:id]
 
     if @post.save
       flash[:notice] = 'Post was successfully created.'
       redirect_to @post
     else
-      render :action => "new"
+      render :action => 'new'
     end
   end
 
@@ -56,7 +69,7 @@ class PostsController < ApplicationController
       flash[:notice] = 'Post was successfully updated.'
       redirect_to @post
     else
-      render :action => "edit"
+      render :action => 'edit'
     end
   end
 
@@ -64,7 +77,7 @@ class PostsController < ApplicationController
   def destroy
     @post = page_post
     @post.destroy
-    redirect_to(posts_url)
+    redirect_to posts_path
   end
 
   # Returns the post navigated to

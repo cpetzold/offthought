@@ -1,4 +1,4 @@
-<h1>New post</h1>
+<% title 'New Post!' %>
 
 <% form_for(@post) do |f| %>
   <%= f.error_messages %>
@@ -8,8 +8,17 @@
     <%= f.text_field :title %>
   </p>
   <p>
+    <%= f.label :category %><br />
+    <%= collection_select(:category, :id, @categories, :id, :name) %>
+  </p>
+  <p>
     <%= f.label :body %><br />
     <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.label @post.captcha.task %><br />
+    <%= f.text_field :captcha_solution %>
+    <%= f.hidden_field :captcha_secret %>
   </p>
   <p>
     <%= f.submit 'Create' %>

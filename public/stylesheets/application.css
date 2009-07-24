@@ -7,8 +7,8 @@ body {
 /*  background: url(../images/bg_brwn.png) repeat-x top left #5b470b;*/
   background: #111;
   color: #333;
-  font-family: Verdana, Helvetica, Arial;
-  font-size: 100%;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Sans-serif;
+  font-size: 12px;
   line-height: 20px;
 }
 
@@ -17,8 +17,13 @@ a img {
 }
 
 a {
-  color: #0000FF;
+  color: #107FC9;
+  font-weight: bold;
   text-decoration: none;
+}
+
+a:hover {
+  color: #020009;
 }
 
 .clear {
@@ -28,15 +33,13 @@ a {
 }
 
 #container {
-  background: #fff;
   width: 980px;
   margin: 0 auto;
-  padding: 20px;
-  margin-top: 20px;
 }
 
 #header {
-  margin-bottom: 20px;
+  display: block;
+  position: relative;
 }
 
 #header h1 a {
@@ -48,20 +51,58 @@ a {
 }
 
 #header ul {
-  float: right;
+  position: absolute;
+  right: 0;
   list-style: none;
-  display: inline;
+  padding: 0;
+  margin: 0;
 }
 
 #header ul li {
   display: inline;
-/*  list-style: none;*/
+}
+
+#header li a, #header li span {
+  padding: 7px;
+}
+
+#header li span {
+  background: #eee;
+}
+
+#header li span:hover {
+  background: #ddd;
+}
+
+#header li span a {
+ background: transparent;
+ padding: 0; 
 }
 
 #header li a {
-  padding: 7px;
-  background: #eee;
+  background: #fff;
   color: #444;
+}
+
+#header li a.home { background: #ddd; }
+
+#header li a.join { background: #ceeeb6; }
+#header li a.join:hover { background: #9dcb7b; }
+
+#header li a.login { background: #d0e9f5; }
+
+#header li a.logout { background: #eec4c4; }
+#header li a.logout:hover { background: #d07373; }
+
+#header li a:hover {
+  color: #020009;
+  background: #96CFEA;
+}
+
+#content {
+  background: #fff;
+  margin: 0;
+  padding: 20px;
 }
 
 #flash_notice, #flash_error {
@@ -115,4 +156,13 @@ a {
 #errorExplanation ul li {
   font-size: 12px;
   list-style: disc;
+}
+
+#title h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#title h1 a {
+  color: #2767AB;
 }

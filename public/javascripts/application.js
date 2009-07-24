@@ -8,8 +8,8 @@ Application = function() {
     init: function() {
       var self = Application;
   
-      $('#container').corners('10px');
-      $('#menu li a').corners('5px');
+      $('#content').corners('10px');
+      $('#menu li a, #menu li span').corners('5px');
   
     }
     

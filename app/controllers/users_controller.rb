@@ -18,6 +18,7 @@ class UsersController < ApplicationController
   # GET /user-name.json
   def show
     @user = page_user
+    @posts = @user.posts
     
     respond_to do |format|
       format.html # show.html.erb

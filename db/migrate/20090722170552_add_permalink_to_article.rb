@@ -5,5 +5,7 @@ class AddPermalinkToArticle < ActiveRecord::Migration
   end
 
   def self.down
+    remove_column :posts, :permalink
+    remove_column :users, :permalink
   end
 end
