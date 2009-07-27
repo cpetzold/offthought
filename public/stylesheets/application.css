@@ -6,9 +6,9 @@
 body {
 /*  background: url(../images/bg_brwn.png) repeat-x top left #5b470b;*/
   background: #111;
-  color: #333;
+  color: #666666;
   font-family: 'Lucida Grande', 'Lucida Sans Unicode', Sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 20px;
 }
 
@@ -18,7 +18,7 @@ a img {
 
 a {
   color: #107FC9;
-  font-weight: bold;
+/*  font-weight: bold;*/
   text-decoration: none;
 }
 
@@ -165,4 +165,18 @@ a:hover {
 
 #title h1 a {
   color: #2767AB;
+}
+
+img.avatar {
+  padding: 2px;
+  background: #fff;
+  border: 1px solid #eee;
+}
+
+
+div.clear {
+  width: 100%;
+  height: 1px;
+  margin: 0 0 -1px;
+  clear: both;
 }

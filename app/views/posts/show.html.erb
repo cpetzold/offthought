@@ -1,3 +1,25 @@
-<% title @post.title %>
+<div id="post-<%= @post.id %>" class="post">
+  <div class="info">
+    <%= image_tag @post.user.gravatar_url(:default => 'identicon', :size => 128) %>
+    <ul>
+      <li><strong>Posted:</strong> <%= @post.created_at %></li>
+      <li><strong>Filed under:</strong> <%= @post.category.name %></li>
+    </ul>
+  </div>
+  <div class="text">
+    <h1><%= @post.title %></h1>
+    <h2>by <%= link_to(@post.user.username, @post.user)  %></h2>
+    
+    <% if current_user == @post.user %>
+      <small>
+        <%= link_to 'Edit', post_edit_path(@post) %>
+      </small>
+    <% end %>
+    
+    <p>
+      <%= @post.body %>
+    </p>
+  </div>
+</div>
 
-<%= render :partial => 'post' %>
+<div class="clear"></div>

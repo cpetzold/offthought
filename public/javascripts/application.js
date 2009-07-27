@@ -10,6 +10,8 @@ Application = function() {
   
       $('#content').corners('10px');
       $('#menu li a, #menu li span').corners('5px');
+      
+      $('.rte').rte('http://localhost:3000/stylesheets/post.css', 'public/images/rte');
   
     }
     

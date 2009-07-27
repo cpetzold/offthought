@@ -1,0 +1,132 @@
+div.post {
+  background: #eee;
+}
+
+div.post div.info {
+  float: left;
+  width: 136px;
+  padding: 0 10px;
+}
+
+div.post div.info img {
+  padding: 3px;
+  border: 1px solid #DFDFDF;
+}
+
+div.post div.info ul {
+  margin: 0;
+  padding: 5px;
+  background: #F9F9F9;
+  list-style: none;
+}
+
+div.post div.info ul li {
+  font-size: .7em;
+}
+
+div.post div.text {
+  float: left;
+  width: 743px;
+  padding: 0 20px;
+  border-left: 1px solid #DFDFDF;
+  word-wrap: break-word;
+}
+
+div.post div.text h1 {
+  margin: 0;
+  padding: 0;
+  font: 3em Georgia;
+  line-height: 1.2em;
+  color: #111;
+}
+
+div.post div.text h2 {
+  margin: 0;
+  padding: 0;
+  font: italic 1.2em Georgia;
+  color: #999;
+}
+
+div.post div.text h2 a {
+  font-weight: normal;
+  color: #999;
+}
+
+div.post div.text p {
+  font-size: 14px;
+  line-height: 1.6em;
+  margin-bottom: 1.4em;
+}
+
+div.post-stub {
+  margin: 0 0 22px;
+}
+
+div.post-stub h1 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font: 1.3em Georgia;
+  font-weight: normal;
+}
+
+div.post-stub h1 a {
+  
+}
+
+div.post-stub div.avatar {
+  float: left;
+  margin-right: .5em;
+}
+
+div.post-stub div.avatar img {
+  float: left;
+  padding: 2px;
+  border: 1px solid #DFDFDF;
+}
+
+div.post-stub div.info span {
+  font-size: .8em;
+  line-height: 2.7em;
+  margin-left: .4em;
+}
+
+div.post-stub cite {
+  font: italic .9em Georgia;
+  color: #999;
+}
+
+div.post-stub cite a {
+  color: #999;
+}
+
+/* Post body editor style */
+#toolbar-post_body {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#toolbar-post_body li {
+  display: inline;
+}
+
+#toolbar-post_body li a {
+  padding: 2px;
+  color: #666;
+  background: #ddd;
+  border: 1px solid #aaa;
+  font-size: .8em;
+  line-height: 30px;
+}  
+
+#post_body {
+  width: 100%;
+  border: 1px solid #aaa;
+}
+  
+  
+  
+  
+  
+  

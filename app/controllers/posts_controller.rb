@@ -39,6 +39,7 @@ class PostsController < ApplicationController
 
   # GET /posts/post-title/edit
   def edit
+    @categories = Category.all
     @post = page_post
     if current_user != @post.user
       flash[:error] = 'Only ' + @post.user.username + ' can edit this post.'
@@ -49,9 +50,10 @@ class PostsController < ApplicationController
 
   # POST /posts
   def create
+    @categories = Category.all
     @post = Post.new(params[:post])
     @post.user_id = current_user.id
-    @post.category_id = params[:payment][:id]
+    @post.category_id = params[:category][:id]
 
     if @post.save
       flash[:notice] = 'Post was successfully created.'
@@ -69,11 +71,12 @@ class PostsController < ApplicationController
       flash[:notice] = 'Post was successfully updated.'
       redirect_to @post
     else
+      flash[:error] = 'Unable to edit'
       render :action => 'edit'
     end
   end
 
-  # DELETE /posts/post-title
+  # DELETE /post-title
   def destroy
     @post = page_post
     @post.destroy
