@@ -84,6 +84,11 @@ a:hover {
   color: #444;
 }
 
+#header li a:hover {
+  color: #020009;
+  background: #96CFEA;
+}
+
 #header li a.home { background: #ddd; }
 
 #header li a.join { background: #ceeeb6; }
@@ -94,10 +99,7 @@ a:hover {
 #header li a.logout { background: #eec4c4; }
 #header li a.logout:hover { background: #d07373; }
 
-#header li a:hover {
-  color: #020009;
-  background: #96CFEA;
-}
+
 
 #content {
   background: #fff;
@@ -106,6 +108,7 @@ a:hover {
 }
 
 #flash_notice, #flash_error {
+  position: absolute;
   padding: 5px 8px;
   margin: 10px 0;
 }

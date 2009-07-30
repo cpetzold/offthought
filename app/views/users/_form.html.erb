@@ -17,7 +17,7 @@
     <%= f.password_field :password_confirmation %>
   </p>
   <p>
-    <%= f.label @user.captcha.task %><br />
+    <%= f.label "Are you human? #{@user.captcha.task} = ?" %><br />
     <%= f.text_field :captcha_solution %>
     <%= f.hidden_field :captcha_secret %>
   </p>

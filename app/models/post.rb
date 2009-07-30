@@ -1,10 +1,10 @@
 class Post < ActiveRecord::Base
-  validates_presence_of :body, :title
+  has_captcha
+  validates_presence_of :body, :title, :description, :category
   belongs_to :user
   belongs_to :category
   has_many :comments
   has_permalink :title
-  has_captcha
   
   def to_param
     permalink

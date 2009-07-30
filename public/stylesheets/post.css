@@ -37,32 +37,61 @@ div.post div.text h1 {
   padding: 0;
   font: 3em Georgia;
   line-height: 1.2em;
+}
+
+div.post div.text h1.category {
+  color: #000;
+}
+
+div.post div.text h1.title {
   color: #111;
 }
 
-div.post div.text h2 {
+div.post div.text cite.author {
   margin: 0;
   padding: 0;
   font: italic 1.2em Georgia;
   color: #999;
 }
 
-div.post div.text h2 a {
+div.post div.text cite.author a {
   font-weight: normal;
   color: #999;
 }
 
+div.post div.text div.description {
+  border-top: 1px solid #DFDFDF;
+  border-bottom: 1px solid #DFDFDF;
+  font-size: .8em;
+  padding: .5em;
+  line-height: 1.5em;
+  margin: 1em 0;
+  word-wrap: break-word;
+}
+
 div.post div.text p {
   font-size: 14px;
-  line-height: 1.6em;
-  margin-bottom: 1.4em;
+  line-height: 1.8em;
 }
+
+/*
+  Post stub
+*/
 
 div.post-stub {
-  margin: 0 0 22px;
+  margin: .3em 0;
+  padding: .3em;
 }
 
-div.post-stub h1 {
+div.even {
+  background: #eee;
+}
+
+div.odd {
+  background: #ddd;
+}
+
+div.post-stub h1.title {
   display: inline;
   margin: 0;
   padding: 0;
@@ -70,8 +99,16 @@ div.post-stub h1 {
   font-weight: normal;
 }
 
-div.post-stub h1 a {
-  
+div.post-stub h2.category {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font: 1.1em Georgia;
+  font-weight: normal;
+}
+
+div.post-stub h2.category a {
+  color: #eee;
 }
 
 div.post-stub div.avatar {
@@ -83,6 +120,19 @@ div.post-stub div.avatar img {
   float: left;
   padding: 2px;
   border: 1px solid #DFDFDF;
+}
+
+div.post-stub p.description {
+  margin: 0px;
+  font-size: .8em;
+  line-height: 1.5em;
+}
+
+div.post-stub p.description span.date {
+  font-size: .9em;
+  background: #efefef;
+  padding: .3em;
+/*  border: 1px solid #ccc;*/
 }
 
 div.post-stub div.info span {
@@ -97,8 +147,9 @@ div.post-stub cite {
 }
 
 div.post-stub cite a {
-  color: #999;
+  color: #777;
 }
+
 
 /* Post body editor style */
 #toolbar-post_body {
@@ -124,9 +175,5 @@ div.post-stub cite a {
   width: 100%;
   border: 1px solid #aaa;
 }
-  
-  
-  
-  
   
   

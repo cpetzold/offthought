@@ -1,11 +1,13 @@
-<div id="post-<%= stub.id %>" class="post-stub">
-  <div class="avatar">
-    <%= image_tag stub.user.gravatar_url(:default => 'identicon', :size => 32) %>
-  </div>
-  <h1><%= link_to(stub.title, stub) %></h1>
-  <cite>by <%= link_to(stub.user.username, stub.user)  %></cite>
-
+<div id="post-<%= stub.id %>" class="post-stub">  
+    <div class="avatar">
+      <%= image_tag stub.user.gravatar_url(:default => 'identicon', :size => 32) %>
+    </div>
+    <h1 class="title"><%= link_to(stub.title, post_path(stub.category, stub)) %></h1>
+    <cite>posted by <%= link_to(stub.user.username, stub.user)  %> in <%= link_to(stub.category.name, category_path(stub.category)) %></cite>
   
+    <p class="description">
+      <span class="date"><%= stub.created_at.strftime('%m/%d/%Y')  %></span><%= stub.description %>
+    </p>
 </div>
 
 <div class="clear"></div>

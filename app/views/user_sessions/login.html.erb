@@ -1,6 +1,6 @@
 <% title "Login" %>
 
-<% form_for @user_session do |f| %>
+<% form_for @user_session, :url => new_login_path do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label :username %><br />
@@ -9,6 +9,10 @@
   <p>
     <%= f.label :password %><br />
     <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :remember_me %><br />
+    <%= f.check_box :remember_me %>
   </p>
   <p><%= f.submit "Login" %></p>
 <% end %>

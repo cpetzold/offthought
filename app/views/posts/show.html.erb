@@ -2,19 +2,24 @@
   <div class="info">
     <%= image_tag @post.user.gravatar_url(:default => 'identicon', :size => 128) %>
     <ul>
-      <li><strong>Posted:</strong> <%= @post.created_at %></li>
+      <li><strong>Posted:</strong> <%= @post.created_at.strftime('%m/%d/%Y') %></li>
       <li><strong>Filed under:</strong> <%= @post.category.name %></li>
     </ul>
   </div>
   <div class="text">
-    <h1><%= @post.title %></h1>
-    <h2>by <%= link_to(@post.user.username, @post.user)  %></h2>
+    <h1 class="title"><%= @post.title %></h1>
+    <cite class="author">by <%= link_to(@post.user.username, @post.user)  %></cite>
     
     <% if current_user == @post.user %>
-      <small>
-        <%= link_to 'Edit', post_edit_path(@post) %>
+      <small class="options">
+        <%= link_to 'Edit', edit_post_path(@post.category, @post) %> | 
+        <%= link_to 'Delete', post_path(@post.category, @post), :confirm => "Are you sure you want to delete '#{@post.title}'?", :method => :delete %>
       </small>
     <% end %>
+    
+    <div class="description">
+      <%= @post.description %>
+    </div>
     
     <p>
       <%= @post.body %>

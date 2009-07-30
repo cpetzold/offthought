@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  
+    
   # GET /users
   # GET /users.xml
   # GET /users.json
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
   # GET /join
   # GET /users/new
   def new
-    @user = User.new    
+    @user = User.new
   end
   
   # POST /users
@@ -38,7 +38,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       flash[:notice] = "Registration Successful"
-      redirect_to users_url 
+      redirect_to root_path
     else
       render :action => 'new'
     end
@@ -49,8 +49,8 @@ class UsersController < ApplicationController
     @user = page_user
     
     if @user != current_user
-      flash[:error] = "You must be logged in as '" + @user.username + "' to edit this profile"
-      redirect_to @user
+      flash[:error] = "You aren't #{@user.username}, get out of here!"
+      redirect_back
     end
     
   end

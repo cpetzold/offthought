@@ -17,6 +17,7 @@ class PostsController < ApplicationController
   # GET /posts/post-title.xml
   # GET /posts/post-title.json
   def show
+    @category = Category.find_by_permalink(params[:category])
     @post = page_post
 
     respond_to do |format|
@@ -30,6 +31,7 @@ class PostsController < ApplicationController
   def new
     if current_user
       @categories = Category.all
+      @category = Category.find_by_permalink(params[:category])
       @post = Post.new
     else
       flash[:error] = 'You must be logged in to post'
@@ -42,7 +44,7 @@ class PostsController < ApplicationController
     @categories = Category.all
     @post = page_post
     if current_user != @post.user
-      flash[:error] = 'Only ' + @post.user.username + ' can edit this post.'
+      flash[:error] = "Only #{@post.user.username} can edit this post."
       redirect_to posts_path
     end
     
@@ -56,8 +58,8 @@ class PostsController < ApplicationController
     @post.category_id = params[:category][:id]
 
     if @post.save
-      flash[:notice] = 'Post was successfully created.'
-      redirect_to @post
+      flash[:notice] = "'#{@post.title}' was successfully created."
+      redirect_to post_path @post.category, @post
     else
       render :action => 'new'
     end
@@ -68,8 +70,8 @@ class PostsController < ApplicationController
     @post = page_post
 
     if @post.update_attributes(params[:post])
-      flash[:notice] = 'Post was successfully updated.'
-      redirect_to @post
+      flash[:notice] = "'#{@post.title}' was successfully updated."
+      redirect_to post_path @post.category, @post
     else
       flash[:error] = 'Unable to edit'
       render :action => 'edit'
@@ -79,8 +81,15 @@ class PostsController < ApplicationController
   # DELETE /post-title
   def destroy
     @post = page_post
-    @post.destroy
-    redirect_to posts_path
+    title = @post.title
+    if @post.destroy
+      flash[:notice] = "'#{title}' was removed."
+      redirect_to posts_path
+    else
+      flash[:error] = "Cannot remove '#{title}' at this time."
+      redirect_to post_path @post.category, @post
+    end
+    
   end
 
   # Returns the post navigated to

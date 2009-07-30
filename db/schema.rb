@@ -9,12 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090723231130) do
+ActiveRecord::Schema.define(:version => 20090729220430) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "permalink"
   end
 
   create_table "posts", :force => true do |t|
@@ -25,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20090723231130) do
     t.string   "permalink"
     t.integer  "user_id"
     t.integer  "category_id"
+    t.text     "description"
   end
 
   create_table "replies", :force => true do |t|
