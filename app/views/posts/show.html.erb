@@ -1,6 +1,8 @@
+<% title "#{@post.title} by #{@post.user.username}", @post.description, false %>
+
 <div id="post-<%= @post.id %>" class="post">
   <div class="info">
-    <%= image_tag @post.user.gravatar_url(:default => 'identicon', :size => 128) %>
+    <%= image_tag @post.user.gravatar_url(:default => 'identicon', :size => 128), :class => 'avatar' %>
     <ul>
       <li><strong>Posted:</strong> <%= @post.created_at.strftime('%m/%d/%Y') %></li>
       <li><strong>Filed under:</strong> <%= @post.category.name %></li>

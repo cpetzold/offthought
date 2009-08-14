@@ -1,20 +1,34 @@
-<% title "Login" %>
+<% title "Login", "Don't forget to leave your shoes at the door!" %>
 
 <% form_for @user_session, :url => new_login_path do |f| %>
   <%= f.error_messages %>
-  <p>
-    <%= f.label :username %><br />
+  
+  <div class="row">
+    <label>Username
+      <span class="small">Forgot it?</span>
+    </label>
     <%= f.text_field :username %>
-  </p>
-  <p>
-    <%= f.label :password %><br />
+  </div>
+  
+  <div class="row">
+    <label>Password
+      <span class="small">Forgot it?</span>
+    </label>
     <%= f.password_field :password %>
-  </p>
-  <p>
-    <%= f.label :remember_me %><br />
+  </div>
+  
+  <div class="row">
+    <label>Remember me?
+      <span class="small">Everyone likes to be remembered</span>
+    </label>
     <%= f.check_box :remember_me %>
-  </p>
-  <p><%= f.submit "Login" %></p>
+  </div>
+  
+  <div class="row">
+    <label>&nbsp;</label>
+    <%= f.submit "Login" %>
+  </div>
+
 <% end %>
 
 

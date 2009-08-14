@@ -1,4 +1,17 @@
-<% title @user.username %>
+<div id="<%= @user.id %>" class="user">
+  <div class="avatar">
+    <%= image_tag @user.gravatar_url(:default => 'identicon', :size => 128) %>
+  </div>
+  <div class="info">
+    <h1 class="username"><%= @user.username %></h1>
+    <h2 class="joined">Member since <%= @user.created_at.strftime('%m/%d/%Y') %></h2>
+  </div>
+  
+  <h3>Contact Information</h3>
+  <p>
+    <label></label>
+  
+  
+</div>
 
-<p><strong>Username:</strong> <%= @user.username %></p>
-<p><strong>Email:</strong> <%= @user.email %></p>
+<div class="clear"></div>

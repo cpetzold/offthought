@@ -8,7 +8,9 @@ div.post div.info {
   padding: 0 10px;
 }
 
-div.post div.info img {
+div.post div.info img {]
+  width: 128px;
+  height: 128px;
   padding: 3px;
   border: 1px solid #DFDFDF;
 }
@@ -118,6 +120,8 @@ div.post-stub div.avatar {
 
 div.post-stub div.avatar img {
   float: left;
+  width: 32px;
+  height: 32px;
   padding: 2px;
   border: 1px solid #DFDFDF;
 }

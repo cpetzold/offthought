@@ -1,25 +1,46 @@
 <% form_for @user do |f| %>
   <%= f.error_messages %>
-  <p>
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
-  </p>
-  <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </p>
-  <p>
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
-  </p>
-  <p>
-    <%= f.label "Are you human? #{@user.captcha.task} = ?" %><br />
-    <%= f.text_field :captcha_solution %>
+
+  <div class="row">
+    <label>Username
+      <span class="small">Your own personal alias</span>
+    </label>
+    <%= f.text_field :username, :class => 'required' %>
+  </div>
+  
+  <div class="row">
+    <label>Email
+      <span class="small">Your valid email</span>
+    </label>
+    <%= f.text_field :email, :class => 'required email' %>
+  </div>
+
+  <div class="row">
+    <label>Password
+      <span class="small">Min. 4 chars</span>
+    </label>
+    <%= f.password_field :password, :class => 'required', :minlength => 4 %>
+  </div>
+
+  <div class="row">
+    <label>Retype Password
+      <span class="small">So many dots to keep track of!</span>
+    </label>
+    <%= f.password_field :password_confirmation, :class => 'required' %>
+  </div>
+
+  <div class="row">
+    <label><%= @user.captcha.task %> = ?
+      <span class="small">Are you human?</span>
+    </label>
+    <%= f.text_field :captcha_solution, :class => 'required number' %>
     <%= f.hidden_field :captcha_secret %>
-  </p>
-  <p><%= f.submit "Submit" %></p>
+  </div>
+
+  <div class="row">
+    <label>&nbsp;</label>
+    <%= f.submit "Submit" %>
+  </div>
+  
+
 <% end %>

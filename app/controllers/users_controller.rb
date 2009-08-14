@@ -31,13 +31,19 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
+    
+    if current_user
+      flash[:notice] = "You're logged in, you don't need to sign up!"
+      redirect_back
+    end
+    
   end
   
   # POST /users
   def create
     @user = User.new(params[:user])
     if @user.save
-      flash[:notice] = "Registration Successful"
+      flash[:notice] = "Hi there, #{@user.username}.  Take a look around!"
       redirect_to root_path
     else
       render :action => 'new'

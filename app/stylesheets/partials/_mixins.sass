@@ -1,0 +1,163 @@
+=logo
+  h1#logo
+    :margin-top 3px
+    :float left
+    :color = !brown_light
+    :font-size 36px
+    :line-height 42px
+    span.off
+      :font-size 43px
+      :font-style italic
+      :line-height 46px
+      :display block
+      :float left
+      :color = !brown_dark
+      :width 58px
+      :height 42px
+      :background no-repeat url('../../images/bubble_medium.png')
+      :margin-right 3px
+      
+    &:hover
+      :color = !white      
+      span.off
+        :color = !white
+=menu
+  ul
+    :position absolute
+    :right 0px
+    :bottom 2px
+    
+    li
+      :color = !brown_light
+      a, span
+        :padding 7px
+      > a
+        +border-radius-top(5px)
+        :background = !brown_med_light
+        :color = !brown_dark
+        
+        &:hover
+          :padding-top 9px
+          :border-top = 2px solid !brown_light
+          :border-bottom = 5px solid !gray_med_light
+        
+        &.current
+          :background = !white
+          :border-top = 4px solid !gray_light
+          :border-bottom = 5px solid !white
+          &:hover
+            :cursor default
+            :padding-top 7px
+            :border-bottom = 5px solid !white
+        
+      span
+        :color = !brown_light
+        a
+          :color = !brown_med_light
+          :background transparent
+          :padding 0px
+          &:hover
+            :background transparent
+=post
+  div.post
+    
+    div.info
+      :float left
+      :width 134px
+      :margin-right 20px
+      
+      img
+        :width 128px
+        :height 128px
+        
+      ul
+        :padding 5px
+        :list-style circle inside
+        :background = !gray_light
+        
+        li
+          :display list-item
+          :font-size 0.8em
+      
+    div.text
+      :float left
+      :word-wrap break-word
+      :border-left = 1px solid !gray_light
+      :padding 0 20px
+      :width 665px
+      
+      h1.category
+        :color = !black
+        
+      h1.title
+        :color = !black
+        
+      cite.author
+        :font = italic 1.2em !title_type
+        :color = !gray_med
+        
+      div.description
+        :border-top = 1px solid !gray_light
+        :border-bottom = 1px solid !gray_light
+        :font-size 0.8em
+        :padding 0.5em
+        :line-height 1.5em
+        :margin 1em 0
+        :word-wrap break-word
+        
+    
+=post_stub
+  div.stub
+  
+  
+=nice_form
+  form
+    :margin 0 auto
+    :padding = !blueprint_grid_margin
+    +column(13)
+    
+    div.row
+      +column(13, true)
+      :padding = !blueprint_grid_margin 0
+    
+    label
+      :color = !brown_med
+      :float left
+      :display block
+      :font-weight bold
+      :text-align right
+      :padding-right = !blueprint_grid_margin
+      :border-right = 1px solid !gray_light
+      +column(5)
+      
+      > span
+        :color = !gray_med_light
+        :float left
+        :display block
+        :text-align right
+        +column(5)
+        
+    input, textarea, select
+      :font-size 1.2em
+      :padding 0.5em
+      :float left
+      :color #666666
+      :background = !white
+      :border = 1px solid !gray_med_light
+      +column(7, true)
+      +border-radius(5px)
+      
+      &[type=submit]
+        :color = !brown_light
+        :background = !brown_dark
+        :border 0px
+        :cursor pointer
+        
+        &:hover
+          :color = !white
+      
+      &[type=hidden]
+        :display none
+        
+    textarea
+      :font = 0.95em !main_type

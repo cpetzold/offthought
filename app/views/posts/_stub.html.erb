@@ -1,6 +1,6 @@
 <div id="post-<%= stub.id %>" class="post-stub">  
     <div class="avatar">
-      <%= image_tag stub.user.gravatar_url(:default => 'identicon', :size => 32) %>
+      <%= image_tag stub.user.gravatar_url(:default => 'identicon', :size => 32), :class => 'avatar' %>
     </div>
     <h1 class="title"><%= link_to(stub.title, post_path(stub.category, stub)) %></h1>
     <cite>posted by <%= link_to(stub.user.username, stub.user)  %> in <%= link_to(stub.category.name, category_path(stub.category)) %></cite>

@@ -6,13 +6,28 @@ Application = function() {
   return {
     
     init: function() {
-      var self = Application;
-  
-      $('#content').corners('10px');
-      $('#menu li a, #menu li span').corners('5px');
+      var self = Application;      
+      // $('.rte').rte();
       
-      $('.rte').rte('http://localhost:3000/stylesheets/post.css', 'public/images/rte');
-  
+      // $('#header').toggle
+      
+      $('form').validate();
+      
+      $('input:not(input:button), select, textarea')
+        .focus(self.focusInputHandler)
+        .blur(self.blurInputHandler);
+      
+      
+    },
+    
+    focusInputHandler: function(e) {
+      $(this).parent('div.row').animate({ backgroundColor : '#eee' });
+      $(this).animate({ color : '#000000' });
+    },
+    
+    blurInputHandler: function(e) {
+      $(this).parent('div.row').animate({ backgroundColor : 'transparent' });
+      $(this).animate({ color : '#666666' });
     }
     
   };

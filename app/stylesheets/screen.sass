@@ -1,0 +1,91 @@
+@import blueprint
+@import blueprint/reset.sass
+@import partials/base.sass
+@import partials/colors.sass
+@import partials/fonts.sass
+@import partials/mixins.sass
+@import partials/rounded_corners.sass
+
++blueprint-typography
++blueprint-utilities
++blueprint-grid
++blueprint-debug
++blueprint-interaction
+
+body
+  :width 100%
+  :background = !white
+  :color = !gray_med
+  :font = 12px !main_type
+  
+  a
+    :color #107FC9
+    :text-decoration none
+    
+    &:hover
+      :color #020009
+      
+    img
+      :border none
+      
+  img
+    &.avatar
+      :padding 2px
+      :background = !white
+      :border = 1px solid !gray_light
+  
+  h1
+    :font = normal 3.5em !title_type
+    :color = !brown_dark
+    :margin-bottom 0px
+    
+  h2
+    :font = italic 1.7em !title_type
+    :color = !gray_med_light
+    
+  p
+  
+  hr
+    :border 0
+    :height 1px
+    :background-color = !gray_light
+    
+  +nice_form
+  
+  div
+    &.clear
+      :width 100%
+      :clear both
+      :height 1px
+      :margin 0 0 -1px
+      :overflow hidden
+      
+    &#header_container
+      :background = !brown_dark
+      :border-bottom = 5px solid !brown_med_light
+      
+      #header
+        +container
+        :position relative
+        :padding-top 5px
+        :height 55px
+        :overflow inherit
+        +menu
+        +logo
+      
+    &#content
+      +container
+      :border-top = 5px solid !gray_light
+      :padding-top = !blueprint_grid_margin
+      
+      +post
+      +post_stub
+    
+  ul
+    :list-style none
+    :padding 0px
+    :margin 0px
+    
+    li
+      :display inline
+    

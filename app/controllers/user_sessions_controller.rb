@@ -6,7 +6,6 @@ class UserSessionsController < ApplicationController
   end
   
   def create
-    puts session[:back]
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
       flash[:notice] = "Successfully logged in."

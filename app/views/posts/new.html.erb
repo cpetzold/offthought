@@ -3,31 +3,44 @@
 <% form_for @post do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :title %><br />
+  <div class="row">
+    <label>Title
+      <span class="small">Ex: Conner is Awesome</span>
+    </label>
     <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :description %><br />
+  </div>
+  
+  <div class="row">
+    <label>Description
+      <span class="small">Ex: An article about how awesome Conner is</span>
+    </label>
     <%= f.text_area :description, :rows => 5 %>
-  </p>
-  <p>
-    <%= f.label :category %><br />
+  </div>
+  
+  <div class="row">
+    <label>Category
+      <span class="small">Put it in a relevant category!</span>
+    </label>
     <%= collection_select(:category, :id, @categories, :id, :name) %>
-  </p>
-  <p>
-    <%= f.label :body %><br />
+  </div>
+  
+  <div class="row">
+    <label>Body
+      <span class="small">Write your heart out</span>
+    </label>
     <%= f.text_area :body, :class => 'rte' %>
-  </p>
-  <p>
-    <%= f.label "Are you human? #{@post.captcha.task} = ?" %><br />
+  </div>
+  
+  <div class="row">
+    <label><%= @post.captcha.task %> = ?
+      <span class="small">Are you human?</span>
+    </label>
     <%= f.text_field :captcha_solution %>
     <%= f.hidden_field :captcha_secret %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-    <small>
-       | <%= link_to 'Cancel', posts_path %>
-    </small>
-  </p>
+  </div>
+  
+  <div class="row">
+    <label><%= link_to 'Cancel', posts_path %> or </label>
+    <%= f.submit 'Submit' %>
+  </div>
 <% end %>

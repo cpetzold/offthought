@@ -5,16 +5,23 @@
 module LayoutHelper
   
   def page_title
-    "OffThought : #{controller.action_name}"
+    "OffThought | #{@content_for_title}"
   end
   
-  def title(page_title, show_title = true)
+  def title(page_title, page_subtitle = '', show_title = true)
     @content_for_title = page_title.to_s
+    @content_for_subtitle = page_subtitle.to_s
     @show_title = show_title
   end
   
   def show_title?
     @show_title
+  end
+  
+  def tab_to(name, options)
+    link_to_unless_current(name, options) do
+      link_to name, '#', :class => 'current'
+    end
   end
   
   def stylesheet(*args)

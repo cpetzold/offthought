@@ -1,0 +1,37 @@
+div.user {
+  
+}
+
+div.user div.avatar {
+  float: left;
+  width: 136px;
+  padding: 0 10px;
+}
+
+div.user div.avatar img {
+  padding: 3px;
+  border: 1px solid #DFDFDF;
+}
+
+div.user div.info {
+  float: left;
+  width: 743px;
+  padding: 0 10px;
+  word-wrap: break-word;
+}
+
+div.user div.info h1.username {
+  margin: 0;
+  padding: 0;
+  font: 3em Georgia;
+  line-height: 1.2em;
+  color: #000;
+}
+
+div.user div.info h2.joined {
+  margin: 0;
+  padding: 0;
+  font: italic 1.2em Georgia;
+  color: #999;
+}
+
