@@ -1,0 +1,52 @@
+=splash
+  &.splash
+    :background = !brown_dark
+    :color = !brown_light
+    :height 100%
+    
+    div#logo
+      :overflow hidden
+      div#bubble_small
+        :background no-repeat url('../../images/bubble_small.png')
+        :position absolute
+        :left -5px
+        :bottom 0px
+        :display none
+        :width 27px
+        :height 24px
+        
+      div#bubble_medium
+        :background no-repeat url('../../images/bubble_medium.png')
+        :position absolute
+        :left 25px
+        :bottom 25px
+        :display none
+        :width 58px
+        :height 42px
+      
+      h1#text
+        :position absolute
+        :left 25px
+        :bottom 80px
+        :display none
+        :color = !brown_light
+        :font-size 140px
+        :line-height 150px
+        
+        span.off
+          :font-size 155px
+          :font-style italic
+          :line-height 143px
+          :display block
+          :float left
+          :color = !brown_dark
+          :width 229px
+          :height 159px
+          :background no-repeat url('../../images/bubble_large.png')
+          :padding-left 7px
+
+        &:hover
+          :color transparent    
+          span.off
+            :background transparent
+            :color = !brown_med

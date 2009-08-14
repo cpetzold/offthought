@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
 
-  map.root :controller => 'posts'
+  map.root :controller => 'pages'
   
   map.join 'join', :controller => 'users', :action => 'new'
   map.login 'login', :controller => 'user_sessions', :action => 'login', :conditions => { :method => :get }

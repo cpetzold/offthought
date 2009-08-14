@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title><%= page_title %></title>
+    
+    <%= stylesheet_link_tag 'compiled/screen', :media => 'screen, projection' %>
+    <%= stylesheet_link_tag 'compiled/partials/_base.css' %>
+    <%= stylesheet_link_tag 'compiled/print.css', :media => 'print' %>
+    
+    <link rel="shortcut icon" href="images/favicon.png" />
+    
+    <%= yield(:head) %>
+  </head>
+  <body class="splash">
+  
+    <div id="logo">
+      <div id="bubble_small"></div>
+      <div id="bubble_medium"></div>
+      <h1 id="text"><span class="off">off</span></h1>
+    </div>
+    
+    <%= javascript_include_tag 'jquery' %>
+    <%= javascript_include_tag 'jquery.easing' %>
+    <%= javascript_include_tag 'jrails' %>
+    <%= javascript_include_tag 'splash' %>
+  </body>
+</html>

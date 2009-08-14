@@ -958,42 +958,96 @@ input.span-24, textarea.span-24, select.span-24 {
   background: #990000;
   color: white; }
 
-/* line 15, ../../../app/stylesheets/screen.sass */
+/* line 16, ../../../app/stylesheets/screen.sass */
 body {
   width: 100%;
   background: white;
   color: #666666;
   font: 12px Lucida Grande, Lucida Sans Unicode, Sans-serif; }
-  /* line 21, ../../../app/stylesheets/screen.sass */
+  /* line 2, ../../../app/stylesheets/partials/_splash.sass */
+  body.splash {
+    background: #1c1913;
+    color: #ffdca2;
+    height: 100%; }
+    /* line 7, ../../../app/stylesheets/partials/_splash.sass */
+    body.splash div#logo {
+      overflow: hidden; }
+      /* line 9, ../../../app/stylesheets/partials/_splash.sass */
+      body.splash div#logo div#bubble_small {
+        background: no-repeat url('../../images/bubble_small.png');
+        position: absolute;
+        left: -5px;
+        bottom: 0px;
+        display: none;
+        width: 27px;
+        height: 24px; }
+      /* line 18, ../../../app/stylesheets/partials/_splash.sass */
+      body.splash div#logo div#bubble_medium {
+        background: no-repeat url('../../images/bubble_medium.png');
+        position: absolute;
+        left: 25px;
+        bottom: 25px;
+        display: none;
+        width: 58px;
+        height: 42px; }
+      /* line 27, ../../../app/stylesheets/partials/_splash.sass */
+      body.splash div#logo h1#text {
+        position: absolute;
+        left: 25px;
+        bottom: 80px;
+        display: none;
+        color: #ffdca2;
+        font-size: 140px;
+        line-height: 150px; }
+        /* line 36, ../../../app/stylesheets/partials/_splash.sass */
+        body.splash div#logo h1#text span.off {
+          font-size: 155px;
+          font-style: italic;
+          line-height: 143px;
+          display: block;
+          float: left;
+          color: #1c1913;
+          width: 229px;
+          height: 159px;
+          background: no-repeat url('../../images/bubble_large.png');
+          padding-left: 7px; }
+        /* line 48, ../../../app/stylesheets/partials/_splash.sass */
+        body.splash div#logo h1#text:hover {
+          color: transparent; }
+          /* line 50, ../../../app/stylesheets/partials/_splash.sass */
+          body.splash div#logo h1#text:hover span.off {
+            background: transparent;
+            color: #665841; }
+  /* line 23, ../../../app/stylesheets/screen.sass */
   body a {
     color: #107FC9;
     text-decoration: none; }
-    /* line 25, ../../../app/stylesheets/screen.sass */
+    /* line 27, ../../../app/stylesheets/screen.sass */
     body a:hover {
       color: #020009; }
-    /* line 28, ../../../app/stylesheets/screen.sass */
+    /* line 30, ../../../app/stylesheets/screen.sass */
     body a img {
       border: none; }
-  /* line 32, ../../../app/stylesheets/screen.sass */
+  /* line 34, ../../../app/stylesheets/screen.sass */
   body img.avatar {
     padding: 2px;
     background: white;
     border: 1px solid #dddddd; }
-  /* line 37, ../../../app/stylesheets/screen.sass */
+  /* line 39, ../../../app/stylesheets/screen.sass */
   body h1 {
     font: normal 3.5em Georgia;
     color: #1c1913;
     margin-bottom: 0px; }
-  /* line 42, ../../../app/stylesheets/screen.sass */
+  /* line 44, ../../../app/stylesheets/screen.sass */
   body h2 {
     font: italic 1.7em Georgia;
     color: #c7c3b8; }
-  /* line 48, ../../../app/stylesheets/screen.sass */
+  /* line 50, ../../../app/stylesheets/screen.sass */
   body hr {
     border: 0;
     height: 1px;
     background-color: #dddddd; }
-  /* line 114, ../../../app/stylesheets/partials/_mixins.sass */
+  /* line 115, ../../../app/stylesheets/partials/_mixins.sass */
   body form {
     margin: 0 auto;
     padding: 10px;
@@ -1004,7 +1058,7 @@ body {
     /* line 97, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.8/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
     * html body form {
       overflow-x: hidden; }
-    /* line 119, ../../../app/stylesheets/partials/_mixins.sass */
+    /* line 120, ../../../app/stylesheets/partials/_mixins.sass */
     body form div.row {
       display: inline;
       float: left;
@@ -1014,7 +1068,7 @@ body {
       /* line 97, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.8/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
       * html body form div.row {
         overflow-x: hidden; }
-    /* line 123, ../../../app/stylesheets/partials/_mixins.sass */
+    /* line 124, ../../../app/stylesheets/partials/_mixins.sass */
     body form label {
       color: #665841;
       float: left;
@@ -1030,7 +1084,7 @@ body {
       /* line 97, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.8/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
       * html body form label {
         overflow-x: hidden; }
-      /* line 133, ../../../app/stylesheets/partials/_mixins.sass */
+      /* line 134, ../../../app/stylesheets/partials/_mixins.sass */
       body form label > span {
         color: #c7c3b8;
         float: left;
@@ -1043,7 +1097,7 @@ body {
         /* line 97, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.8/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
         * html body form label > span {
           overflow-x: hidden; }
-    /* line 140, ../../../app/stylesheets/partials/_mixins.sass */
+    /* line 141, ../../../app/stylesheets/partials/_mixins.sass */
     body form input, body form textarea, body form select {
       font-size: 1.2em;
       padding: 0.5em;
@@ -1061,33 +1115,33 @@ body {
       /* line 97, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.8/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
       * html body form input, * html body form textarea, * html body form select {
         overflow-x: hidden; }
-      /* line 150, ../../../app/stylesheets/partials/_mixins.sass */
+      /* line 151, ../../../app/stylesheets/partials/_mixins.sass */
       body form input[type=submit], body form textarea[type=submit], body form select[type=submit] {
         color: #ffdca2;
         background: #1c1913;
         border: 0px;
         cursor: pointer; }
-        /* line 156, ../../../app/stylesheets/partials/_mixins.sass */
+        /* line 157, ../../../app/stylesheets/partials/_mixins.sass */
         body form input[type=submit]:hover, body form textarea[type=submit]:hover, body form select[type=submit]:hover {
           color: white; }
-      /* line 159, ../../../app/stylesheets/partials/_mixins.sass */
+      /* line 160, ../../../app/stylesheets/partials/_mixins.sass */
       body form input[type=hidden], body form textarea[type=hidden], body form select[type=hidden] {
         display: none; }
-    /* line 162, ../../../app/stylesheets/partials/_mixins.sass */
+    /* line 163, ../../../app/stylesheets/partials/_mixins.sass */
     body form textarea {
       font: 0.95em Lucida Grande, Lucida Sans Unicode, Sans-serif; }
-  /* line 56, ../../../app/stylesheets/screen.sass */
+  /* line 58, ../../../app/stylesheets/screen.sass */
   body div.clear {
     width: 100%;
     clear: both;
     height: 1px;
     margin: 0 0 -1px;
     overflow: hidden; }
-  /* line 63, ../../../app/stylesheets/screen.sass */
+  /* line 65, ../../../app/stylesheets/screen.sass */
   body div#header_container {
     background: #1c1913;
     border-bottom: 5px solid #a68f69; }
-    /* line 67, ../../../app/stylesheets/screen.sass */
+    /* line 69, ../../../app/stylesheets/screen.sass */
     body div#header_container #header {
       width: 900px;
       margin: 0 auto;
@@ -1100,18 +1154,18 @@ body {
       /* line 5, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.8/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
       body div#header_container #header {
         display: block; }
-      /* line 25, ../../../app/stylesheets/partials/_mixins.sass */
+      /* line 26, ../../../app/stylesheets/partials/_mixins.sass */
       body div#header_container #header ul {
         position: absolute;
         right: 0px;
         bottom: 2px; }
-        /* line 30, ../../../app/stylesheets/partials/_mixins.sass */
+        /* line 31, ../../../app/stylesheets/partials/_mixins.sass */
         body div#header_container #header ul li {
           color: #ffdca2; }
-          /* line 32, ../../../app/stylesheets/partials/_mixins.sass */
+          /* line 33, ../../../app/stylesheets/partials/_mixins.sass */
           body div#header_container #header ul li a, body div#header_container #header ul li span {
             padding: 7px; }
-          /* line 34, ../../../app/stylesheets/partials/_mixins.sass */
+          /* line 35, ../../../app/stylesheets/partials/_mixins.sass */
           body div#header_container #header ul li > a {
             border-top-left-radius: 5px;
             -moz-border-radius-topleft: 5px;
@@ -1121,30 +1175,30 @@ body {
             -webkit-border-top-right-radius: 5px;
             background: #a68f69;
             color: #1c1913; }
-            /* line 39, ../../../app/stylesheets/partials/_mixins.sass */
+            /* line 40, ../../../app/stylesheets/partials/_mixins.sass */
             body div#header_container #header ul li > a:hover {
               padding-top: 9px;
               border-top: 2px solid #ffdca2;
               border-bottom: 5px solid #c7c3b8; }
-            /* line 44, ../../../app/stylesheets/partials/_mixins.sass */
+            /* line 45, ../../../app/stylesheets/partials/_mixins.sass */
             body div#header_container #header ul li > a.current {
               background: white;
               border-top: 4px solid #dddddd;
               border-bottom: 5px solid white; }
-              /* line 48, ../../../app/stylesheets/partials/_mixins.sass */
+              /* line 49, ../../../app/stylesheets/partials/_mixins.sass */
               body div#header_container #header ul li > a.current:hover {
                 cursor: default;
                 padding-top: 7px;
                 border-bottom: 5px solid white; }
-          /* line 53, ../../../app/stylesheets/partials/_mixins.sass */
+          /* line 54, ../../../app/stylesheets/partials/_mixins.sass */
           body div#header_container #header ul li span {
             color: #ffdca2; }
-            /* line 55, ../../../app/stylesheets/partials/_mixins.sass */
+            /* line 56, ../../../app/stylesheets/partials/_mixins.sass */
             body div#header_container #header ul li span a {
               color: #a68f69;
               background: transparent;
               padding: 0px; }
-              /* line 59, ../../../app/stylesheets/partials/_mixins.sass */
+              /* line 60, ../../../app/stylesheets/partials/_mixins.sass */
               body div#header_container #header ul li span a:hover {
                 background: transparent; }
       /* line 2, ../../../app/stylesheets/partials/_mixins.sass */
@@ -1161,18 +1215,15 @@ body {
           line-height: 46px;
           display: block;
           float: left;
-          color: #1c1913;
+          color: #665841;
           width: 58px;
           height: 42px;
-          background: no-repeat url('../../images/bubble_medium.png');
           margin-right: 3px; }
-        /* line 20, ../../../app/stylesheets/partials/_mixins.sass */
-        body div#header_container #header h1#logo:hover {
-          color: white; }
-          /* line 22, ../../../app/stylesheets/partials/_mixins.sass */
-          body div#header_container #header h1#logo:hover span.off {
-            color: white; }
-  /* line 76, ../../../app/stylesheets/screen.sass */
+        /* line 22, ../../../app/stylesheets/partials/_mixins.sass */
+        body div#header_container #header h1#logo:hover span.off {
+          background: no-repeat url('../../images/bubble_medium.png');
+          color: #1c1913; }
+  /* line 78, ../../../app/stylesheets/screen.sass */
   body div#content {
     width: 900px;
     margin: 0 auto;
@@ -1183,42 +1234,42 @@ body {
     /* line 5, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.8/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
     body div#content {
       display: block; }
-    /* line 64, ../../../app/stylesheets/partials/_mixins.sass */
+    /* line 65, ../../../app/stylesheets/partials/_mixins.sass */
     body div#content div.post div.info {
       float: left;
       width: 134px;
       margin-right: 20px; }
-      /* line 69, ../../../app/stylesheets/partials/_mixins.sass */
+      /* line 70, ../../../app/stylesheets/partials/_mixins.sass */
       body div#content div.post div.info img {
         width: 128px;
         height: 128px; }
-      /* line 73, ../../../app/stylesheets/partials/_mixins.sass */
+      /* line 74, ../../../app/stylesheets/partials/_mixins.sass */
       body div#content div.post div.info ul {
         padding: 5px;
         list-style: circle inside;
         background: #dddddd; }
-        /* line 78, ../../../app/stylesheets/partials/_mixins.sass */
+        /* line 79, ../../../app/stylesheets/partials/_mixins.sass */
         body div#content div.post div.info ul li {
           display: list-item;
           font-size: 0.8em; }
-    /* line 82, ../../../app/stylesheets/partials/_mixins.sass */
+    /* line 83, ../../../app/stylesheets/partials/_mixins.sass */
     body div#content div.post div.text {
       float: left;
       word-wrap: break-word;
       border-left: 1px solid #dddddd;
       padding: 0 20px;
       width: 665px; }
-      /* line 89, ../../../app/stylesheets/partials/_mixins.sass */
+      /* line 90, ../../../app/stylesheets/partials/_mixins.sass */
       body div#content div.post div.text h1.category {
         color: black; }
-      /* line 92, ../../../app/stylesheets/partials/_mixins.sass */
+      /* line 93, ../../../app/stylesheets/partials/_mixins.sass */
       body div#content div.post div.text h1.title {
         color: black; }
-      /* line 95, ../../../app/stylesheets/partials/_mixins.sass */
+      /* line 96, ../../../app/stylesheets/partials/_mixins.sass */
       body div#content div.post div.text cite.author {
         font: italic 1.2em Georgia;
         color: #666666; }
-      /* line 99, ../../../app/stylesheets/partials/_mixins.sass */
+      /* line 100, ../../../app/stylesheets/partials/_mixins.sass */
       body div#content div.post div.text div.description {
         border-top: 1px solid #dddddd;
         border-bottom: 1px solid #dddddd;
@@ -1227,11 +1278,11 @@ body {
         line-height: 1.5em;
         margin: 1em 0;
         word-wrap: break-word; }
-  /* line 84, ../../../app/stylesheets/screen.sass */
+  /* line 86, ../../../app/stylesheets/screen.sass */
   body ul {
     list-style: none;
     padding: 0px;
     margin: 0px; }
-    /* line 89, ../../../app/stylesheets/screen.sass */
+    /* line 91, ../../../app/stylesheets/screen.sass */
     body ul li {
       display: inline; }
